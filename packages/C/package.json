@@ -1,0 +1,9 @@
+{
+  "name": "@webpack5-module-federation/remote-b",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "webpack -w -m ../../webpack.common.ts ./webpack.dev.ts",
+    "build": "webpack -w -m ../../webpack.common.ts ./webpack.production.ts"
+  }
+}

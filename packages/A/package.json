@@ -1,0 +1,9 @@
+{
+  "name": "@webpack5-module-federation/host",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "webpack serve -m -c ../../webpack.common.ts -c ./webpack.dev.ts",
+    "build": "webpack -m -c ../../webpack.common.ts -c ./webpack.production.ts"
+  }
+}
