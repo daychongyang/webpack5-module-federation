@@ -6,10 +6,10 @@ const { ModuleFederationPlugin } = container;
 export default <Configuration>{
   plugins: [
     new ModuleFederationPlugin({
-      name: "main",
-      remotes: {
-        components: "components@http://localhost:10086/remoteEntry.js",
-        extra: "extra@http://localhost:12138/remoteEntry.js",
+      name: "extra",
+      filename: "remoteEntry.js",
+      exposes: {
+        "./remote-component": "./src/RemoteComponent",
       },
       shared: { react: { singleton: true }, "react-dom": { singleton: true } },
     }),

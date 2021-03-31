@@ -32,13 +32,24 @@ export default <Configuration>{
             presets: [
               [
                 require.resolve("@babel/preset-env"),
-                {
-                  useBuiltIns: "usage",
-                  corejs: { version: 3 },
-                },
+                // {
+                //   useBuiltIns: "usage",
+                //   targets: "last 2 versions, not dead",
+                //   corejs: { version: 3 },
+                // },
               ],
               require.resolve("@babel/preset-react"),
               require.resolve("@babel/preset-typescript"),
+            ],
+            plugins: [
+              require.resolve("@babel/plugin-syntax-dynamic-import"),
+              // [
+              //   require.resolve("@babel/plugin-transform-runtime"),
+              //   {
+              //     corejs: { version: 3 },
+              //     helpers: true,
+              //   },
+              // ],
             ],
           },
         },
